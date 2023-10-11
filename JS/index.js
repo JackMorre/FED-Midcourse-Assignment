@@ -47,9 +47,7 @@ async function getAPI() {
   }
 }
 
-changeBtn.addEventListener("click", async function (e) {
-  e.preventDefault();
-
+async function updateRandomiser() {
   for (let n = 0; n < 4; n++) {
     const obj = await getAPI();
     const card = drinksContainer.querySelector(`[data-number="${n + 1}"]`);
@@ -57,9 +55,19 @@ changeBtn.addEventListener("click", async function (e) {
 
     const drinkImg = card.querySelector(".drink-img");
 
+    card.setAttribute("data-id", obj.idDrink);
+
     drinkTitle.textContent = obj.strDrink;
     drinkImg.setAttribute("src", obj.strDrinkThumb);
+    drinkImg.setAttribute("alt", `image of ${obj.strDrink}`);
   }
+}
+
+updateRandomiser();
+
+changeBtn.addEventListener("click", async function (e) {
+  e.preventDefault();
+  updateRandomiser();
 });
 
 async function getIngrediants() {
