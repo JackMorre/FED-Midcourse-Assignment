@@ -54,7 +54,6 @@ const selectOption = () => {
             option.classList.add('selected')
         });
     });
-    console.log(correctAns);
 }
 
 const checkAnswer = () => {
