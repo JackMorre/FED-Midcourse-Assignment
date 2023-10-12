@@ -10,6 +10,8 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
+  position: relative;
+  top: -6svh;
 }
 /* Positioning of button in hero section */
 #hero-button {
@@ -31,5 +33,5 @@
 }
 #hero-button:hover {
   color: var(--white);
-  background-color: var(--thirty);
+  background-color: var(--ten);
 }

@@ -38,9 +38,9 @@
           <div class="menu-text">
             <nav id="main-nav" aria-roledescription="Burger menu" aria-expanded="false">
                 <ul id="menu-list">
-                  <li><a href="">Recommended</a></li>
-                  <li><a href="">Challenge</a></li>
-                  <li><a href="">Filter</a></li>
+                  <li><a href="#reccomended-drinks">Recommended</a></li>
+                  <li><a href="#randomDrinks">Randomise it!</a></li>
+                  <li><a href="#quiz-wrapper">Quiz</a></li>
                 </ul>
             </nav>
           </div>  
@@ -48,7 +48,7 @@
     
       <section id="drink-card-api">
       <!-- replace the 'events-btn' with the drinking card id html & js-->
-        <button id="events-btn">CLICK me</button>
+        <!-- <button id="events-btn">CLICK me</button> -->
         <div id="my-modal" class="modal">
           <div class="modal-content">
             <span class="close" aria-label="close button">&times;</span>
@@ -126,7 +126,7 @@
       </div>
     </section>
 
-    <section class="reccomended-drinks">
+    <section class="reccomended-drinks" id="reccomended-drinks">
       <h2 class="rec-title">Our Reccomendations</h2>
       <section class="top-picks">
         <div class="picks-inner">
@@ -186,7 +186,7 @@
           />
         </svg>
       </section>
-      <section class="randomDrinks">
+      <section class="randomDrinks" id="randomDrinks">
         <h3 class="random-title">Cocktail Randomiser</h3>
         <div class="button-container" aria-label="button container">
           <button class="alcoholic-btn">Alcoholic</button>
@@ -236,7 +236,7 @@
     </section>
     <section class="edil">
       <!-- Edil HTML code goes here -->
-      <div class="quiz-wrapper">
+      <div class="quiz-wrapper" id="quiz-wrapper">
         <div class="quiz-container">
           <div class="quiz-header">
             <h1 class="quiz-title">Test Your know knowledge</h1>
