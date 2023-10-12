@@ -21,7 +21,7 @@
     <section class="ili">
       <section id="nav-bar"> 
         <div class="logo-img">
-          <img src="assets/logo.png" id="logo">
+          <img src="assets/logo.png" id="logo" alt="logo-img">
         </div>
     
         <div class="icon-button">
@@ -38,9 +38,9 @@
           <div class="menu-text">
             <nav id="main-nav" aria-roledescription="Burger menu" aria-expanded="false">
                 <ul id="menu-list">
-                  <li><a href="">Recommended</a></li>
-                  <li><a href="">Challenge</a></li>
-                  <li><a href="">Filter</a></li>
+                  <li><a href="#reccomended-drinks">Recommended</a></li>
+                  <li><a href="#randomDrinks">Randomise it!</a></li>
+                  <li><a href="#quiz-wrapper">Quiz</a></li>
                 </ul>
             </nav>
           </div>  
@@ -48,7 +48,7 @@
     
       <section id="drink-card-api">
       <!-- replace the 'events-btn' with the drinking card id html & js-->
-        <button id="events-btn">CLICK me</button>
+        <!-- <button id="events-btn">CLICK me</button> -->
         <div id="my-modal" class="modal">
           <div class="modal-content">
             <span class="close" aria-label="close button">&times;</span>
@@ -64,7 +64,7 @@
               <div class="text1-container">
                 <h2 id="drink-title">S*x on the beach</h2>
                 <h3 id="drink-type">alcoholic / non-alcoholic</h3>
-                <table>
+                <table class="table">
                   <tr>
                     <th>Ingredients</th>
                     <th>Measurements</th>
@@ -107,8 +107,10 @@
                     beep beep beep beep beep beep beep beep
                   </p>
                 </div>
+              <div class="last-two">
                 <h2>Glass type:</h2>
                 <h3 id="glass-type">beep</h3>
+              </div>
               </div>
             </div>
           </div>
@@ -123,8 +125,12 @@
         <button id="hero-button" type="button">
           Choose your drink for tonight!
         </button>
+        <section id="section04" class="demo">
+        <!-- <h1>Scroll Down Button #4</h1> -->
+        <a href="#reccomended-drinks"><span></span></a></section>
       </div>
     </section>
+
 
     <section class="reccomended-drinks">
       <h2 class="rec-title">Our Recommendation</h2>
@@ -186,9 +192,9 @@
           />
         </svg>
       </section>
-      <section class="randomDrinks">
+      <section class="randomDrinks" id="randomDrinks">
         <h3 class="random-title">Cocktail Randomiser</h3>
-        <div class="button-container">
+        <div class="button-container" aria-label="button container">
           <button class="alcoholic-btn">Alcoholic</button>
           <button class="non-alcoholic-btn">Non-Alcoholic</button>
           <div class="button-c">
@@ -203,28 +209,28 @@
           </div>
         </div>
         <div class="drinksContainer">
-          <div class="drink-card" data-number="1">
+          <div class="drink-card" data-number="1" data-id="">
             <img class="drink-img" src="" alt="" srcset="" />
             <div class="text-c">
               <h4 class="drink-title">Sex On The Beach</h4>
               <p class="category">Alcoholic</p>
             </div>
           </div>
-          <div class="drink-card" data-number="2">
+          <div class="drink-card" data-number="2" data-id="">
             <img class="drink-img" src="" alt="" srcset="" />
             <div class="text-c">
               <h4 class="drink-title">Sex On The Beach</h4>
               <p class="category">Alcoholic</p>
             </div>
           </div>
-          <div class="drink-card" data-number="3">
+          <div class="drink-card" data-number="3" data-id="">
             <img class="drink-img" src="" alt="" srcset="" />
             <div class="text-c">
               <h4 class="drink-title">Sex On The Beach</h4>
               <p class="category">Alcoholic</p>
             </div>
           </div>
-          <div class="drink-card" data-number="4">
+          <div class="drink-card" data-number="4" data-id="">
             <img class="drink-img" src="" alt="" srcset="" />
             <div class="text-c">
               <h4 class="drink-title">Sex On The Beach</h4>
@@ -236,6 +242,7 @@
     </section>
     <section class="edil">
       <!-- Edil HTML code goes here -->
+
       <h2 class="main-quiz-title">Quiz Time</h2>
       <div class="quiz-wrapper">
         <div class="quiz-container">
@@ -352,6 +359,7 @@
     </footer>
     <script src="./index.js"></script>
     <script src="./JS/quiz.js"></script>
+    <script src="./JS/model.js"></script>
     <script src="./JS/index.js"></script>
     <script src="./JS/carousels.js"></script>
     <script src="./JS/script-iLi.js"></script>
