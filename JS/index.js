@@ -28,7 +28,7 @@ function randonNumber(number) {
   return Math.floor(Math.random() * number);
 }
 
-async function getAPI() {
+async function getAPI(webAddressStr, param = 0) {
   //   const url = "https://the-cocktail-db.p.rapidapi.com/randomselection.php";
   //   const options = {
   //     method: "GET",
@@ -39,7 +39,7 @@ async function getAPI() {
   //   };
 
   try {
-    const response = await fetch("./APIcall.json");
+    const response = await fetch(webAddressStr);
     const result = await response.json();
     return result.drinks[randonNumber(10)];
   } catch (error) {
@@ -47,27 +47,75 @@ async function getAPI() {
   }
 }
 
-async function updateRandomiser() {
-  for (let n = 0; n < 4; n++) {
-    const obj = await getAPI();
-    const card = drinksContainer.querySelector(`[data-number="${n + 1}"]`);
-    const drinkTitle = card.querySelector(".drink-title");
+// async function getAPI(webAddressStr, param = 0) {
+//   const url = `${webAddressStr}${param}`;
+//   console.log(url);
+//   const options = {
+//     method: "GET",
+//     headers: {
+//       "X-RapidAPI-Key": "4ef4ff2aa1mshc058d32cee8d29dp1a5b52jsnfd5943f08fc1",
+//       "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+//     },
+//   };
 
-    const drinkImg = card.querySelector(".drink-img");
+//   try {
+//     console.log(webAddressStr, param);
+//     const response = await fetch(url, options);
+//     const result = await response.json();
+//     return result.drinks[randonNumber(10)];
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
 
-    card.setAttribute("data-id", obj.idDrink);
-
-    drinkTitle.textContent = obj.strDrink;
-    drinkImg.setAttribute("src", obj.strDrinkThumb);
-    drinkImg.setAttribute("alt", `image of ${obj.strDrink}`);
+async function updateRandomiser(webAddress, param) {
+  let addedDrinks = [];
+  let count = 0;
+  let number = 4;
+  for (let n = 0; n < number; n++) {
+    const obj = await getAPI(webAddress, param);
+    if (addedDrinks.length === 0) {
+      changeCard(obj, count);
+      addedDrinks.push(obj.strDrink);
+      count++;
+    } else {
+      if (addedDrinks.includes(obj.strDrink)) {
+        number++;
+        continue;
+      } else if (!addedDrinks.includes(obj.strDrink)) {
+        changeCard(obj, count);
+        addedDrinks.push(obj.strDrink);
+        count++;
+      } else {
+        break;
+      }
+    }
   }
 }
 
-updateRandomiser();
+function changeCard(obj, n) {
+  const card = drinksContainer.querySelector(`[data-number="${n + 1}"]`);
+  const drinkTitle = card.querySelector(".drink-title");
+
+  const drinkImg = card.querySelector(".drink-img");
+
+  card.setAttribute("data-id", obj.idDrink);
+
+  drinkTitle.textContent = obj.strDrink;
+  drinkImg.setAttribute("src", obj.strDrinkThumb);
+  drinkImg.setAttribute("alt", `image of ${obj.strDrink}`);
+}
+
+// updateRandomiser(
+//   "https://the-cocktail-db.p.rapidapi.com/filter.php?a=",
+//   "Alcoholic"
+// );
+
+updateRandomiser("./APIcall.json");
 
 changeBtn.addEventListener("click", async function (e) {
   e.preventDefault();
-  updateRandomiser();
+  updateRandomiser("./APIcall.json");
 });
 
 async function getIngrediants() {
@@ -93,8 +141,6 @@ async function getIngrediants() {
     }
   }
 }
-
-getIngrediants();
 
 //gets the divided amountmso each card can fit
 const dividedNumber = 100 / Number(cardArray.length);

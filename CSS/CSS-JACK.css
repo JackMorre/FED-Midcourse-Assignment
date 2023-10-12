@@ -6,6 +6,7 @@
   --heading: "Raleway", sans-serif;
   --text: "Montserrat", sans-serif;
   --margin-section: 5rem;
+  --basic-transition: all 0.3s ease-in-out;
 }
 
 html {
@@ -64,9 +65,10 @@ html {
 .top-picks {
   width: 100%;
   max-width: 550px;
-  background-color: var(--thirty);
+
   overflow: hidden;
   position: relative;
+  border: 5px solid var(--thirty);
 
   border-radius: 20px;
 }
@@ -79,7 +81,7 @@ html {
 }
 
 .card {
-  padding: 1rem;
+  padding: 3rem;
   width: 75%;
   max-width: 550px;
   display: flex;
@@ -149,7 +151,7 @@ svg {
 .random-title,
 .reccomended-drinks h2 {
   font-family: var(--heading);
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -167,10 +169,12 @@ svg {
 .alcoholic-btn,
 .non-alcoholic-btn {
   font-size: 1rem;
-  background-color: var(--sixty);
+  background-color: var(--white);
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 20px;
+  cursor: pointer;
+  border: 4px solid var(--ten);
 }
 
 .drinksContainer {
@@ -184,13 +188,19 @@ svg {
   display: flex;
   padding-bottom: 1rem;
   gap: 1rem;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 100px;
+  transition: var(--basic-transition);
+  cursor: pointer;
 }
 
 .drink-img {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  border: 3px solid var(--sixty);
+  border: 5px solid var(--sixty);
+  transition: var(--basic-transition);
 }
 
 .text-c {
@@ -219,7 +229,10 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--sixty);
+  background-color: var(--white);
+  cursor: pointer;
+  border: 4px solid var(--ten);
+  transition: var(--basic-transition);
 }
 
 .change svg {
@@ -245,21 +258,62 @@ svg {
     border-radius: 15px;
   }
 
-  .img-c img {
-    width: 220%;
-    transform: translateX(-180px);
+  .rec-img-two {
+    width: 150%;
+    transform: translate(-70px, -70px);
+  }
+
+  .rec-img-one {
+    width: 250%;
+    transform: translateX(-195px);
+  }
+
+  .rec-img-three {
+    width: 250%;
+    transform: translateX(-60px);
   }
 
   .drinksContainer {
     flex-direction: row;
     max-width: 38rem;
+    justify-content: space-between;
+    gap: 1rem;
   }
 
   .drink-card {
-    width: 50%;
+    width: 45%;
   }
 
   .instructions {
     width: 85%;
+  }
+
+  .drink-card:hover {
+    background-color: var(--sixty);
+  }
+
+  .drink-card:hover img {
+    border: 2px solid var(--sixty);
+  }
+
+  .alcoholic-btn,
+  .non-alcoholic-btn {
+    border: 4px solid var(--ten);
+    background-color: var(--white);
+    transition: var(--basic-transition);
+  }
+
+  .alcoholic-btn:hover,
+  .non-alcoholic-btn:hover {
+    border: 4px solid var(--ten);
+    background-color: var(--ten);
+  }
+
+  .button-c .change:hover {
+    background-color: var(--ten);
+  }
+
+  .fill {
+    background-color: var(--ten);
   }
 }
