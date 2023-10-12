@@ -1,17 +1,10 @@
 const rightArrow = document.querySelector(".right");
-
 const leftArrow = document.querySelector(".left");
-
 const container = document.querySelector(".picks-inner");
-
 const cardArray = document.querySelectorAll(".card");
-
 const changeBtn = document.querySelector(".change");
-
 const allDrinks = document.querySelectorAll(".drink-card");
-
 const drinksContainer = document.querySelector(".drinksContainer");
-
 function changeCarouselWidth() {
   if (this.window.innerWidth >= 550) {
     container.style.width = `${550 * cardArray.length}px`;
@@ -19,11 +12,8 @@ function changeCarouselWidth() {
     container.style.width = `${cardArray.length}00vw`;
   }
 }
-
 leftArrow.style.display = "none";
-
 changeCarouselWidth();
-
 function randonNumber(number) {
   return Math.floor(Math.random() * number);
 }
@@ -120,7 +110,6 @@ changeBtn.addEventListener("click", async function (e) {
 
 async function getIngrediants() {
   const obj = await getAPI();
-
   let count = 1;
   let number = 1;
   const ingrediants = [];
@@ -147,14 +136,12 @@ const dividedNumber = 100 / Number(cardArray.length);
 //create currentcard and final number varibles outside scope
 let currentCard = "";
 let finalNumber = "";
-
 //creating function for clicking arrows
 const clickArrow = (str) => {
   let cardNumber = "";
   // making sure arrows are availble to press at start of click
   rightArrow.style.display = "block";
   leftArrow.style.display = "block";
-
   //this if statment cicles through all of the cards availble
   for (let i = 0; i < cardArray.length; i++) {
     //each time we go through we get a card from card array to grab the card variable.
@@ -183,29 +170,23 @@ const clickArrow = (str) => {
     cardNumber = Number(currentCard.getAttribute("data-number")) + 1;
     finalNumber = dividedNumber * cardNumber;
   }
-
   container.style.transform = `translateX(-${finalNumber}%)`;
-
   if (cardNumber === 0) {
     leftArrow.style.display = "none";
   } else if (cardNumber + 1 === cardArray.length) {
     rightArrow.style.display = "none";
   }
 };
-
 leftArrow.addEventListener("click", (e) => {
   e.preventDefault();
   clickArrow("left");
 });
-
 rightArrow.addEventListener("click", (e) => {
   e.preventDefault();
   clickArrow("right");
 });
-
 window.addEventListener("resize", function (e) {
   e.preventDefault();
-
   if (this.window.innerWidth >= 550) {
     container.style.width = `${550 * cardArray.length}px`;
   } else if (this.window.innerWidth < 550) {

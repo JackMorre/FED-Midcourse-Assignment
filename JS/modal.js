@@ -35,6 +35,11 @@ async function getApiId(string) {
   }
 }
 
+spanEl.onclick = function () {
+  console.log("clicked");
+  modal.style.display = "none";
+};
+
 allDrinkEl.addEventListener("click", async function (e) {
   e.preventDefault();
   const id = e.target.closest("[data-id]").getAttribute("data-id");
