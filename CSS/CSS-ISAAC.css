@@ -5,7 +5,7 @@
   --ten: #ffed66;
 }
 .hero {
-  background-image: url("/assets/kobby-mendez-xBFTjrMIC0c-unsplash.jpg");
+  background-image: url("./assets/kobby-mendez-xBFTjrMIC0c-unsplash.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -36,8 +36,6 @@
   color: var(--white);
   background-color: var(--ten);
 }
-
-
 
 /* // iLi: added a scroll down arrow */
 #section04 a {
@@ -92,16 +90,16 @@
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   color: #fff;
-  font : normal 400 20px/1 'Josefin Sans', sans-serif;
-  letter-spacing: .1em;
+  font: normal 400 20px/1 "Josefin Sans", sans-serif;
+  letter-spacing: 0.1em;
   text-decoration: none;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   cursor: pointer;
   padding: none;
 }
 
 .demo a:hover {
-  opacity: .5;
+  opacity: 0.5;
   all: unset;
   cursor: pointer;
   animation-play-state: paused;
