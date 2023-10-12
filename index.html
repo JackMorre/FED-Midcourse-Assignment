@@ -19,40 +19,36 @@
 
   <body>
     <section class="ili">
-      <section id="nav-bar">
+      <section id="nav-bar"> 
         <div class="logo-img">
-          <img src="assets/logo.png" id="logo" alt="logo-img" />
+          <img src="assets/logo.png" id="logo" alt="logo-img">
         </div>
-
+    
         <div class="icon-button">
           <button id="nav-expand-button">
             <span class="visually-hidden">Menu</span>
-            <svg id="menu-icon" viewBox="0 0 100 80" width="30" height="30">
-              <rect width="60" height="13" rx="10"></rect>
-              <rect y="30" width="60" height="13" rx="10"></rect>
-              <rect y="60" width="60" height="13" rx="10"></rect>
-            </svg>
+              <svg id="menu-icon" viewBox="0 0 100 80" width="30" height="30">
+                <rect width="60" height="13" rx="10"></rect>
+                <rect y="30" width="60" height="13" rx="10"></rect>
+                <rect y="60" width="60" height="13" rx="10"></rect>
+              </svg>
           </button>
         </div>
-
-        <div class="menu-text">
-          <nav
-            id="main-nav"
-            aria-roledescription="Burger menu"
-            aria-expanded="false"
-          >
-            <ul id="menu-list">
-              <li><a href="#reccomended-drinks">Recommended</a></li>
-              <li><a href="#randomDrinks">Randomise it!</a></li>
-              <li><a href="#quiz-wrapper">Quiz</a></li>
-            </ul>
-          </nav>
-        </div>
-      </section>
-
+    
+          <div class="menu-text">
+            <nav id="main-nav" aria-roledescription="Burger menu" aria-expanded="false">
+                <ul id="menu-list">
+                  <li><a href="#reccomended-drinks">Recommended</a></li>
+                  <li><a href="#randomDrinks">Randomise it!</a></li>
+                  <li><a href="#quiz-wrapper">Quiz</a></li>
+                </ul>
+            </nav>
+          </div>  
+    </section>
+    
       <section id="drink-card-api">
-        <!-- replace the 'events-btn' with the drinking card id html & js-->
-        <button id="events-btn">CLICK me</button>
+      <!-- replace the 'events-btn' with the drinking card id html & js-->
+        <!-- <button id="events-btn">CLICK me</button> -->
         <div id="my-modal" class="modal">
           <div class="modal-content">
             <span class="close" aria-label="close button">&times;</span>
@@ -62,7 +58,6 @@
                 <img
                   src="https://www.allrecipes.com/thmb/jgUBewi7-dIrLBAgMi6meC7s_zw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/24221-Sex-On-The-Beach-DDMFS-4x3-cd29644eb4e34a63a362584a342b4a30.jpg"
                   id="img-api"
-                  alt="image of drink"
                 />
               </div>
 
@@ -112,13 +107,16 @@
                     beep beep beep beep beep beep beep beep
                   </p>
                 </div>
+              <div class="last-two">
                 <h2>Glass type:</h2>
                 <h3 id="glass-type">beep</h3>
               </div>
+              </div>
             </div>
           </div>
-        </div>
+        
       </section>
+    
     </section>
 
     <!-- Isaac HTML code goes here -->
@@ -127,6 +125,9 @@
         <button id="hero-button" type="button">
           Choose your drink for tonight!
         </button>
+        <section id="section04" class="demo">
+        <!-- <h1>Scroll Down Button #4</h1> -->
+        <a href="#reccomended-drinks"><span></span></a></section>
       </div>
     </section>
 
@@ -139,7 +140,6 @@
               <div class="card-top">
                 <div class="img-c">
                   <img
-                    class="rec-img-one"
                     src="./content/pylyp-sukhenko-ibh9J-fIgZU-unsplash.webp"
                     alt="old fashioned cocktail"
                     width="200px"
@@ -153,84 +153,21 @@
                     <li><strong>3</strong> dash Angostura Bitters</li>
                     <li><strong>1 each</strong> Lemon and orange twist</li>
                   </ul>
+                  <p class="alcoholic">Alcoholic or Non-Alcoholic</p>
                 </div>
               </div>
               <div class="instructions-c">
                 <p class="instructions">
-                  Add the sugar and bitters into a mixing glass, then add the
-                  water, and stir until the sugar is nearly dissolved. <br />
-                  Fill the mixing glass with ice, add the bourbon, and stir
-                  until well-chilled. <br />
-                  Strain into a rocks glass over one large ice cube. <br />
-                  Express the oil of an orange twist over the glass, then drop
-                  into the glass to garnish.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. A
+                  ipsa quam corrupti quae fugiat ducimus est sunt excepturi
+                  commodi voluptatibus doloremque nemo, dignissimos corporis
+                  incidunt eaque aliquam enim cumque perferendis.
                 </p>
               </div>
             </div>
           </div>
-          <div class="card" data-viewing="false" data-number="1">
-            <div class="card-inner">
-              <div class="card-top">
-                <div class="img-c">
-                  <img
-                    class="rec-img-two"
-                    src="./assets/cosmopolitan.webp"
-                    alt="old fashioned cocktail"
-                    width="200px"
-                  />
-                </div>
-                <div class="main-text-c">
-                  <h2 class="name">Cosmopolitan</h2>
-                  <ul class="ingredients">
-                    <li><strong>1 ½ oz</strong> Absolut Citron</li>
-                    <li><strong>3/4 oz</strong> Cointreau</li>
-                    <li><strong>3/4 oz</strong> Fresh Lime Juice</li>
-                    <li><strong>3/4 oz</strong> Cranberry Juice</li>
-                    <li><strong>Garnish:</strong> Lemon Twist</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="instructions-c">
-                <p class="instructions">
-                  Combine all ingredients in a cocktail shaker with ice.
-                  <br />Shake until cold and strain into a chilled coupe glass.
-                  <br />Garnish with lemon twist.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="card" data-viewing="false" data-number="2">
-            <div class="card-inner">
-              <div class="card-top">
-                <div class="img-c">
-                  <img
-                    class="rec-img-three"
-                    src="./assets/Piña-Colada.webp"
-                    alt="old fashioned cocktail"
-                    width="200px"
-                  />
-                </div>
-                <div class="main-text-c">
-                  <h2 class="name">Piña Colada</h2>
-                  <ul class="ingredients">
-                    <li><strong>2 oz</strong> White Rum</li>
-                    <li><strong>2 oz</strong> Coconut Cream</li>
-                    <li><strong>2 oz</strong> Pineapple Juice</li>
-                    <li><strong>Garnish:</strong> Pineapple Leaf</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="instructions-c">
-                <p class="instructions">
-                  Combine all ingredients, except pineapple leaf, into a shaker.
-                  <br />Add ice to fill. <br />Shake vigorously, until shaker is
-                  frosted over. <br />Fill hurricane glass with crushed ice.
-                  <br />Strain cocktail into glass. <br />Garnish with pineapple
-                  leaf and enjoy.
-                </p>
-              </div>
-            </div>
-          </div>
+          <div class="card red" data-viewing="false" data-number="1">2</div>
+          <div class="card orange" data-viewing="false" data-number="2">3</div>
         </div>
         <svg
           class="left"
@@ -257,8 +194,10 @@
       <section class="randomDrinks" id="randomDrinks">
         <h3 class="random-title">Cocktail Randomiser</h3>
         <div class="button-container" aria-label="button container">
+          <button class="alcoholic-btn">Alcoholic</button>
+          <button class="non-alcoholic-btn">Non-Alcoholic</button>
           <div class="button-c">
-            <button class="change" aria-label="refresh randomiser">
+            <button class="change">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path
@@ -346,7 +285,6 @@
         <div class="footer-input">
           <form action="">
             <p>Send this page too yourself</p>
-            <label for="email">Email:</label>
             <input class="email" type="email" placeholder="Your email here" />
             <button class="email-btn" type="submit">Send</button>
           </form>
@@ -415,7 +353,7 @@
         <p>Terms & Condition</p>
       </div>
     </footer>
-    <script src="./JS/modal.js"></script>
+    <script src="./JS/model.js"></script>
     <script src="./JS-EDIL/quiz.js"></script>
     <script src="./JS/index.js"></script>
     <script src="./JS/carousels.js"></script>
