@@ -44,6 +44,11 @@ a:hover {
   background-color: transparent;
 }
 
+.logo-img > a {
+  all: unset;
+  cursor: pointer;
+}
+
 li, a, ul, .menu-text, .logo-img, #logo, svg, p {
   background-color: transparent;
 }
