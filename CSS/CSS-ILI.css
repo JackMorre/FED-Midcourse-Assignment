@@ -21,6 +21,7 @@ a {
   text-decoration: none;
   transition: cubic-bezier(0.215, 0.610, 0.355, 1) 2s;
   padding: 0.3rem;
+  color: var(--thirtyDDARKER);
 }
 
 a:visited {
