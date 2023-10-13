@@ -19,6 +19,7 @@
   position: relative;
   top: -6svh;
   background-attachment: fixed;
+  clip-path: circle(100svh at 50% 0);
 }
 
 /* Positioning of button in hero section */
